@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "09108091-461a-4ae4-bde0-d1f220b92486",
+		"name": "Backend Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/v1/conference/talk?filter=all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/v1/conference/talk?filter=all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"conference",
+						"talk"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/v1/conference/talk/3",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "            {\n            \"speakers\": [\"roshan\",\"gokul\"],\n            \"participants\": [\"username1_email1\", \"username2_email2\"]\n            }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/v1/conference/talk/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"conference",
+						"talk",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/v1/conference/talk/3",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "            {\n            \"datetime\": \"2021-11-26T16:41:50\",\n            \"duration\": 1\n            }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/v1/conference/talk/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"conference",
+						"talk",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/v1/conference/talk?filter={\"conference_id\":1}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/v1/conference/talk?filter={\"conference_id\":1}",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"conference",
+						"talk"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "{\"conference_id\":1}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/v1/conference/talk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "            {\n            \"title\": \"Talk latest\",\n            \"description\": \"test talk latest\",\n            \"datetime\": \"2021-11-26T15:40:50\",\n            \"duration\": 3,\n            \"conference_id\": 1,\n            \"speakers\": [\"test1\"],\n            \"participants\": [\"test2\"]\n            }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/v1/conference/talk",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"conference",
+						"talk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/v1/conference?filter=all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "            \"title\": \"Conference test 1\",\n            \"description\": \"test conference 1\",\n            \"start_date\": \"2021-11-27 15:39:51\",\n            \"end_date\": \"2021-11-27 15:39:51\",",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/v1/conference?filter=all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"conference"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/v1/conference",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"title\": \"Conference test 2\",\n            \"description\": \"test conference 1\",\n            \"start_date\": \"2021-11-27 15:39:51\",\n            \"end_date\": \"2021-11-27 15:39:51\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/v1/conference",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"conference"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/v1/conference/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Conference Updated 2\",\n  \"start_date\": \"2021-11-26 15:38:51\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/v1/conference/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"conference",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

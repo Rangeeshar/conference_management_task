@@ -1,3 +1,6 @@
+"""
+ORM model for basic operations
+"""
 from constants import db
 from datetime import datetime
 

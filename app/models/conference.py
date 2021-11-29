@@ -19,9 +19,9 @@ class Conference(Base):
         result = {
         "title": self.title,
         "description": self.description,
-        "start_date" :self.start_date.strftime("%Y-%m-%d %H:%M:%S") if self.start_date else None,
-        "end_date" : self.end_date.strftime("%Y-%m-%d %H:%M:%S") if self.end_date else None,
-        "created_at": self.created_at.strftime("%Y-%m-%d %H:%M:%S") if self.created_at else None,
-        "updated_at": self.updated_at.strftime("%Y-%m-%d %H:%S") if self.updated_at else None
+        "start_date" :self.start_date.strftime("%Y-%m-%dT%H:%M:%S") if self.start_date else None,
+        "end_date" : self.end_date.strftime("%Y-%m-%dT%H:%M:%S") if self.end_date else None,
+        "created_at": self.created_at.strftime("%Y-%m-%dT%H:%M:%S") if self.created_at else None,
+        "updated_at": self.updated_at.strftime("%Y-%m-%dT%H:%S") if self.updated_at else None
         }
         return result

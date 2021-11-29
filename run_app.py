@@ -1,4 +1,7 @@
-from flask import Flask
+"""
+Server Running and Serving file
+"""
+
 from flask_restx import Api
 from app.controllers.conference import conference_ns
 from app.models.conference import Conference

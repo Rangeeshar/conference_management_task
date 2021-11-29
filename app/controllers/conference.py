@@ -1,4 +1,7 @@
-from flask import Flask, request
+"""
+Controller for conference
+"""
+from flask import request
 from flask_restx import Resource, fields, Namespace
 from app.service import conference_manager
 
@@ -26,40 +29,35 @@ modify_conference_model = conference_ns.model(
 )
 
 fetch_conference_model = conference_ns.model(
-    "Conference_fetch",
-    {
-        "filter": fields.String()
-    }
+    "Conference_fetch", {"filter": fields.String()}
 )
 
-fetch_talk_model = conference_ns.model(
-    "Talk fetch", {
-        "filter": fields.String()
-    }
-)
+fetch_talk_model = conference_ns.model("Talk fetch", {"filter": fields.String()})
 
 create_talk_model = conference_ns.model(
-    "Create Talk", {
+    "Create Talk",
+    {
         "title": fields.String(required=True),
         "description": fields.String(required=True),
+        "conference_id": fields.Integer(required=True),
         "duration": fields.Integer(required=True),
         "datetime": fields.DateTime(required=True),
-        "speakers": fields.List(fields.String(required=True)),  
+        "speakers": fields.List(fields.String(required=True)),
         "participants": fields.List(fields.String(required=True)),
-    }
+    },
 )
 
 modify_talk_model = conference_ns.model(
-    "Modify Talk", {
+    "Modify Talk",
+    {
         "title": fields.String(),
         "description": fields.String(),
         "duration": fields.Integer(),
         "datetime": fields.DateTime(),
-        "speakers": fields.List(fields.String()),  
+        "speakers": fields.List(fields.String()),
         "participants": fields.List(fields.String()),
-    }
+    },
 )
-
 
 
 @conference_ns.route("")

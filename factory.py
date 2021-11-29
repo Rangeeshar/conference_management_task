@@ -1,3 +1,7 @@
+"""
+Factory file for create app 
+"""
+
 from constants import db, migrate
 from flask import Flask
 
